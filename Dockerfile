@@ -47,7 +47,6 @@ RUN apt-get update \
    openssl \
    locales \
    i965-va-driver \
-   i915-va-driver \
    vainfo \
 # Intel VAAPI Tone mapping dependencies:
 # Prefer NEO to Beignet since the latter one doesn't support Comet Lake or newer for now.
