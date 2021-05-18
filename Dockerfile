@@ -45,6 +45,7 @@ RUN apt-get update \
  && apt-get install --no-install-recommends --no-install-suggests -y \
    mesa-va-drivers \
    intel-media-va-driver-non-free \
+   i965-va-driver \   
    jellyfin-ffmpeg \
    openssl \
    locales \
