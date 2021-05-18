@@ -43,10 +43,10 @@ RUN apt-get update \
  && apt-get update \
  && apt-get install --no-install-recommends --no-install-suggests -y \
    mesa-va-drivers \
+   intel-media-va-driver-non-free \
    jellyfin-ffmpeg \
    openssl \
    locales \
-   i965-va-driver \
    vainfo \
 # Intel VAAPI Tone mapping dependencies:
 # Prefer NEO to Beignet since the latter one doesn't support Comet Lake or newer for now.
@@ -68,12 +68,12 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* \
  && mkdir -p /cache /config /media \
  && chmod 777 /cache /config /media \
- && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
+ && sed -i -e 's/# en_US.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
 
 ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
-ENV LC_ALL en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
+ENV LC_ALL zh_CN.UTF-8
+ENV LANG zh_CN.UTF-8
+ENV LANGUAGE zh_CN:zh
 
 EXPOSE 8096
 VOLUME /cache /config /media
