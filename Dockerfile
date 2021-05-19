@@ -47,7 +47,9 @@ RUN apt-get update \
    vainfo \
    intel-media-va-driver-non-free \
    i965-va-driver \
-   intel-vaapi-driver \
+   libdrm-intel1 \
+   libva1 \
+   libva-intel-vaapi-driver \
    jellyfin-ffmpeg \
    openssl \
    locales \
